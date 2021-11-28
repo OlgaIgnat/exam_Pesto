@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Menu</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Besley:wght@600;700;800;900&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../modalform/libs/remodal/remodal.css">
+    <link rel="stylesheet" href="../modalform/libs/remodal/remodal-default-theme.css">
+    <link rel="stylesheet" href="../modalform/css/formstyle.css">    
+</head>
+<body>     
+  <header id="home">    
+    <div class="nav_container">        
+      <div class="header_nav">           
+          <div class="brand_nav"><a href="index.html"><img class="brand-logo-light" src="../img/logo.png" alt="" width="140" height="57"></a></div>                 
+            <div class="navbar fill">                    
+                <ul>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a></li>
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="menu.html">Menu</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="gallery.html">Gallery</a></li>                
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="contacts.html">Contacts</a></li>
+                </ul>                    
+            </div>            
+            <a class="button_book linkButton" data-remodal-target="firstModal" href="#">book now</a>
+            <div class="remodal" data-remodal-id="firstModal" data-remodal-options="hashTracking: false,closeOnConfirm: false">
+              <button data-remodal-action="close" class="remodal-close"></button>
+              <div class="formArea">               
+              <form id="secondForm" class="form" autocomplete="off">
+              <p class="formTitle">Request a call back and our administrator will contact you</p>
+              <p class="msgs"></p>             
+                  <fieldset class="form-fieldset ui-input __first">
+                    <input name="uname" type="text" id="username" required tabindex="0" minlength="2" pattern="^[a-zA-Z]+$" placeholder="Alex"/>
+                    <label for="username">
+                      <span data-text="Enter your name">Enter your name</span>
+                    </label>
+                  </fieldset>             
+                  <fieldset class="form-fieldset ui-input __second">
+                    <input name="uphone" type="tel" id="phone" tabindex="0" min="6" max="18" required pattern="^[\+\ 0-9]+$" placeholder="+375XXX XXX XXX"/>
+                    <label for="phone">
+                      <span data-text="Enter your phone">Enter your phone</span>
+                    </label>
+                  </fieldset>             
+                  <input name="formInfo" class="formInfo" type="hidden" value=""/>             
+                  <div class="form-footer">
+                    <input type="submit" class="formBtn" value="Back call" />
+                  </div>                 
+              </form>
+              </div>
+            </div>          
+
+            <div class="hidden-menu">
+              <input type="checkbox">
+              <span class="line_nav"></span>
+              <span class="line_nav"></span>
+              <span class="line_nav"></span>              
+              <div class="header__toggle-menu" >
+                  <div class="nav-toggle fill">
+                      <ul class="nav_menu_toggle">
+                          <li ><a href="index.html"> Home</a></li>
+                          <li><a href="about.html">About</a></li>
+                          <li class="rd-nav-item active"><a href="menu.html">Menu</a></li>
+                          <li><a href="gallery.html">Gallery</a></li>
+                          <li><a href="contacts.html">Contacts</a></li>                         
+                      </ul>
+                      <a class="button_book toggle linkButton" data-remodal-target="firstModal" href="#">book now</a>
+                  </div>
+              </div> 
+            </div>                 
+      </div>
+    </div>     
+  </header> 
+  <section class="menu">
+      <div class="container">
+          <h2>Our Restaurant Menu</h2>          
+              <div class="menu_tab">
+                <ul class="nav_tab">
+                  <li onclick="openbox('box1'); return false" class="nav-item" ><a class=" nav-link box1 active" href="#box1"  data-toggle="tab">mains</a></li>
+                  <li onclick="openbox('box2'); return false" class="nav-item" ><a class="nav-link box2" href="#box2" data-toggle="tab">Desserts</a></li>
+                  <li onclick="openbox('box3'); return false" class="nav-item"><a class=" nav-link box3" href="#box3" data-toggle="tab">drinks</a></li>
+                </ul> 
+                <div  id="box1" class="mains menu_block">
+                      <div class="menu_item">
+                        <div class="menu-photo"><img src="../img/menu1.jpg" alt=""></div>                        
+                        <div class="item_text">
+                          <p class="price">$25.89</p>
+                          <h4 class="item_title"><a class="modal_link" href="#osso_buco">Osso Buco</a></h4>
+                          <p>Osso Buco is one of the Italian greats - slow cooked veal in a white wine tomato sauce. Meltingly tender, this is both hearty and luxurious.</p>
+                          <div class="line"></div>
+                        </div>             
+                      </div>
+
+                      <div class="menu_item" >
+                        <div class="menu-photo"><img src="../img/menu2.jpg" alt=""></div>
+                        <div class="item_text">
+                          <p class="price">$16.89</p>
+                          <h4 class="item_title"><a class="modal_link" href="#pappardelle_mimmo">Pappardelle Mimmo</a></h4>
+                          <p>This delicious dish tops long, wide pasta with scallops, lobster, asparagus, butter, sage and truffle oil to cater every palate.</p>
+                          <div class="line"></div>
+                        </div>                       
+                      </div>
+
+                      <div class="menu_item">
+                        <div class="menu-photo"><img src="../img/menu6.jpg" alt=""></div>
+                        <div class="item_text">
+                          <p class="price">$17.89</p>
+                          <h4 class="item_title"><a class="modal_link" href="#trippa_satriano">Trippa Satriano</a></h4>
+                          <p>Thinly sliced herb encrusted ahi tuna topped with diced tomatoes, olives, capers, red onions and fennel. Perfect choice even for the first-time visitors!</p>
+                          <div class="line"></div>
+                        </div>                       
+                      </div>
+
+                      <div class="menu_item">
+                        <div class="menu-photo"><img src="../img/menu5.jpg" alt=""></div>
+                        <div class="item_text">
+                          <p class="price">$18.89</p>
+                          <h4 class="item_title"><a class="modal_link" href="#filetto_di_manzo">Filetto Di Manzo</a></h4>
+                          <p>Wonderful combination of prime tenderloin, winter greens, Jerusalem artichoke puree, and oxtail reduction sauce.</p>
+                          <div class="line"></div>
+                        </div>                       
+                      </div>
+                </div> 
+                      
+                <div id="box2" class="desserts menu_block" style="display: none;">
+                    <div class="menu_item">
+                      <div class="menu-photo"><img src="../img/menu11.jpg" alt=""></div>
+                      <div class="item_text">
+                        <p class="price">$10.89</p>
+                        <h4 class="item_title"><a class="modal_link" href="#tiramisu">Tiramisu</a></h4>
+                        <p>A Pesto’s favorite - classic Italian dessert made with lady fingers, Mascarpone cheese &amp; espresso. Perfect for both kids and adults.</p>
+                        <div class="line"></div>
+                      </div>                    
+                    </div> 
+
+                    <div class="menu_item">
+                      <div class="menu-photo"><img src="../img/menu12.jpg" alt=""></div>
+                      <div class="item_text">
+                        <p class="price">$6.89</p>
+                        <h4 class="item_title"><a class="modal_link" href="#сannoli">Cannoli</a></h4>
+                        <p>Trio tower of cannoli filled with smooth ricotta, sugar &amp; cinnamon, with chocolate &amp; raspberry sauces. Single cannoli is also available.</p>
+                        <div class="line"></div>
+                      </div>                     
+                    </div>
+
+                    <div class="menu_item">
+                      <div class="menu-photo"><img src="../img/menu13.jpg" alt=""></div>
+                      <div class="item_text">
+                        <p class="price">$5.89</p>
+                        <h4 class="item_title"><a class="modal_link" href="#pistachio_passion">Pistachio Passion</a></h4>
+                        <p>Layered pistachio cream, cream cheese custard &amp; whipped cream atop a rich walnut crust.</p>
+                        <div class="line"></div>
+                      </div>              
+                    </div>
+
+                    <div class="menu_item">
+                      <div class="menu-photo"><img src="../img/menu14.jpg" alt=""></div>
+                      <div class="item_text">
+                        <p class="price">$4.89</p>
+                        <h4 class="item_title"><a class="modal_link" href="#biscotti">Chocolate-and-Pistachio Biscotti</a></h4>
+                        <p>At Pesto, we vary these wonderful nutty biscotti, while also dipping them in melted dark chocolate for an extra layer of flavor.</p>
+                        <div class="line"></div>
+                      </div>                    
+                    </div>                     
+                </div>
+
+              <div id="box3" class=" drinks menu_block" style="display: none;">
+                    <div class="menu_item">
+                      <div class="menu-photo"><img src="../img/menu17.jpg" alt=""></div>
+                      <div class="item_text">
+                        <p class="price">$10.89</p>
+                        <h4 class="item_title"><a class="modal_link" href="#negroni">Negroni</a></h4>
+                        <p>The most popular drink in Venice: refreshing, easygoing &amp;…happy! Perfect to be sipped as an “Aperitivo” just before dinner - delightful!</p>
+                        <div class="line"></div>
+                      </div>                
+                    </div> 
+
+                    <div class="menu_item">
+                      <div class="menu-photo"><img src="../img/menu19.jpg" alt=""></div>
+                      <div class="item_text">
+                        <p class="price">$9.89</p>
+                        <h4 class="item_title"><a class="modal_link" href="#aperol_spritz">Aperol Spritz</a></h4>
+                        <p>Reward yourself with a moment of relaxation &amp; pure pleasure while enjoying the full flavour &amp; simplicity of a Negroni, an iconic Italian cocktail.</p>
+                        <div class="line"></div>
+                      </div>                      
+                    </div>
+
+                    <div class="menu_item">
+                      <div class="menu-photo"><img src="../img/menu20.jpg" alt=""></div> 
+                      <div class="item_text">
+                        <p class="price">$11.89</p>
+                        <h4 class="item_title"><a class="modal_link" href="#negroni_sbagliato">Negroni Sbagliato</a></h4>
+                        <p>A cocktail for those who prefer more delicate flavours but nonetheless want a drink full of taste &amp; personality.</p>
+                        <div class="line"></div>
+                      </div>                    
+                    </div> 
+
+                    <div class="menu_item">
+                      <div class="menu-photo"><img src="../img/menu24.jpg" alt=""></div>
+                      <div class="item_text">
+                        <p class="price">$8.89</p>
+                        <h4 class="item_title"><a class="modal_link" href="#bellini">White Peach Bellini</a></h4>
+                        <p>White Peach Bellini is a classic drink from Venice Italy of white peach purée and Prosecco. It is one of our most popular drinks at Pesto.</p>
+                        <div class="line"></div>
+                      </div>                    
+                    </div>                   
+              </div>
+          </div>
+      </section>
+      <section class="modal_menu">
+        <div class="modal" id="osso_buco">
+          <span class=" close_modal_window popup_close">x</span>
+          <div  class="modal_content">
+            <h4>Osso Buco</h4>
+          <p><span>Сomposition: </span> primebeef, olive oil, butter, carrot, onion, garlic, celery stalk, parsley, flour, White wine, tomato paste, chicken bouillon, rosemary, nutmeg, salt and pepper.<br/><span> Weight: </span>  200gr</p>
+          <div class="menu-photo-modal"><img src="../img/menu1.jpg" alt=""></div>           
+        </div>        
+        </div>
+        <div  class="modal" id="pappardelle_mimmo">
+          <span class=" close_modal_window popup_close">x</span>
+          <div class="modal_content">
+            <h4>Pappardelle Mimmo</h4>
+          <p><span>Сomposition: </span> long, wide pasta, scallops, lobster, crisp asparagus, warmed butter, sage and savory truffle oil.<br/> <span> Weight: </span> 300gr</p>
+          <div class="menu-photo-modal"><img src="../img/menu2.jpg" alt=""></div>
+        </div>
+        </div>
+        <div class="modal" id="trippa_satriano">
+          <span class=" close_modal_window popup_close">x</span>
+          <div class="modal_content">
+            <h4>Trippa Satriano</h4>
+          <p><span>Сomposition: </span>  veal scaloppini, sage, prosciutto, white wine sauce, sautéed spinach, sliced eggplant, mozzarella, tomato sauce.<br/><span> Weight:</span>  230gr</p>
+          <div class="menu-photo-modal"><img src="../img/menu6.jpg" alt=""></div>
+        </div>
+        </div>
+        <div  class="modal" id="filetto_di_manzo">
+          <span class=" close_modal_window popup_close">x</span>
+          <div class="modal_content">
+            <h4>Filetto Di Manzo</h4>
+          <p><span>Сomposition: </span>  rump (sirloin) or rib-eye (bone-in) steak, sprig fresh rosemary, extra-virgin olive oil, arugula to serve, Parmigiano Reggiano cheese to serve.<br/> <span>Weight: </span> 220gr</p>
+          <div class="menu-photo-modal"><img src="../img/menu5.jpg" alt=""></div>
+        </div>
+        </div>
+        <div class="modal" id="tiramisu">
+          <span class=" close_modal_window popup_close">x</span>
+          <div  class="modal_content">
+            <h4>Tiramisu</h4>
+          <p><span>Сomposition: </span>mascarpone cheese, coffee, chicken eggs, sugar and savoyardi cookies, cocoa, walnuts.<br/><span> Weight: </span>  220gr</p>
+          <div class="menu-photo-modal"><img src="../img/menu11.jpg" alt=""></div>           
+        </div>        
+        </div> 
+        <div class="modal" id="сannoli">
+          <span class=" close_modal_window popup_close">x</span>
+          <div  class="modal_content">
+            <h4>Cannoli</h4>
+          <p><span>Сomposition: </span>  wheat flour, cocoa, sugar, salt, butter, white wine vinegar, marsala, chicken egg, vegetable oil, ricotta cheese, ground cinnamon, candied fruits, chocolate, pistachios<br/><span> Weight: </span>  250gr</p> 
+          <div class="menu-photo-modal"><img src="../img/menu12.jpg" alt=""></div>          
+        </div>        
+        </div> 
+        <div class="modal" id="pistachio_passion">
+          <span class=" close_modal_window popup_close">x</span>
+          <div  class="modal_content">
+            <h4>Pistachio Passion</h4>
+          <p><span>Сomposition: </span>  pistachios, sugar, salt, butter, white wine vinegar, marsala, chicken egg, vegetable oil, ricotta cheese, ground cinnamon, candied fruits, chocolate. <br/><span> Weight: </span>  250gr</p>
+          <div class="menu-photo-modal"><img src="../img/menu13.jpg" alt=""></div>           
+        </div>        
+        </div>
+        <div class="modal" id="biscotti">
+          <span class=" close_modal_window popup_close">x</span>
+          <div  class="modal_content">
+            <h4>Chocolate-and-Pistachio Biscotti</h4>
+          <p><span>Сomposition: </span>  vanilla,pistachios, sugar, egg, salt, butter, marsala, chicken egg, vegetable oil, ricotta cheese, ground cinnamon,dark chocolate. <br/><span> Weight: </span>  250gr</p> 
+          <div class="menu-photo-modal"><img src="../img/menu14.jpg" alt=""></div>          
+        </div>        
+        </div>
+        <div class="modal" id="negroni">
+          <span class=" close_modal_window popup_close">x</span>
+          <div  class="modal_content">
+            <h4>Negroni</h4>
+          <p><span>Сomposition: </span>  dry gin, campari bitter, red vermouth (Martini Rosso), orange, ice. <br/><span> Weight: </span>  150gr</p>
+          <div class="menu-photo-modal"><img src="../img/menu17.jpg" alt=""></div>             
+        </div>        
+        </div>   
+        <div class="modal" id="aperol_spritz">
+          <span class=" close_modal_window popup_close">x</span>
+          <div  class="modal_content">
+            <h4>Aperol Spritz</h4>
+          <p><span>Сomposition: </span>  rosecco, aperol, sparkling water, orange peel. <br/><span> Weight: </span>  200gr</p>  
+          <div class="menu-photo-modal"><img src="../img/menu19.jpg" alt=""></div>           
+        </div>        
+        </div>
+        <div class="modal" id="negroni_sbagliato">
+          <span class=" close_modal_window popup_close">x</span>
+          <div  class="modal_content">
+            <h4>Negroni Sbagliato</h4>
+          <p><span>Сomposition: </span>  gin, sweet vermouth, Campari, orange slice, Gentiana aperitif.<br/><span> Weight: </span>  130gr</p> 
+          <div class="menu-photo-modal"><img src="../img/menu20.jpg" alt=""></div>            
+        </div>        
+        </div>
+        <div class="modal" id="bellini">
+          <span class=" close_modal_window popup_close">x</span>
+          <div  class="modal_content">
+            <h4>White Peach Bellini</h4>
+          <p><span>Сomposition: </span>  martini, Prosecco, white peaches, sugar syrup, lemon juice.<br/><span> Weight: </span>  300gr</p> 
+          <div class="menu-photo-modal"><img src="../img/menu24.jpg" alt=""></div>            
+        </div>        
+      <div>
+  </section>
+  <footer>
+        <div class="footer_up">                   
+              <div class="footer_logo"><a href="index.html"><img class="brand-logo-light" src="../img/logo.png" alt="Logo" width="140" height="57"></a></div>
+              <div class="footer_nav">
+                <ul >
+                  <li class="rd-nav-item "><a class="rd-nav-link" href="index.html">Home</a></li>                     
+                  <li class="rd-nav-item"><a href="about.html">About</a></li> 
+                  <li class="rd-nav-item active"><a href="menu.html">Menu</a></li>
+                  <li class="rd-nav-item"><a href="gallery.html">Gallery</a></li>               
+                  <li class="rd-nav-item"><a href="contacts.html">Contacts</a></li>                                         
+                </ul>
+              </div>
+              <div class="footer_social">
+                <a href="https://twitter.com"><i class="ico_social ico_tw_black"></i></a>
+                <a href="https://www.facebook.com"><i class="ico_social ico_fb_black"></i></a>
+                <a href="https://help.pinterest.com"><i class="ico_social ico_pint_black"></i></a>
+                <a href="https://www.google.by"><i class="ico_social ico_google_black"></i></a>               
+              </div>
+        </div>
+            <div class="up"><a href="#home">&#94</a></div>
+            <div class="footer_down"><p class="rights"><span>©&nbsp; </span> 2021 <a href="#home"> Pesto </a>All Rights Reserved. Privacy Policy</p></div>                  
+  </footer> 
+      <script src="js/main.js"></script>       
+      <script src="js/menu.js"></script> 
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="../modalform/libs/remodal/remodal.min.js"></script>
+      <script src="../modalform/js/form.js"></script>  
+</body>
+</html>

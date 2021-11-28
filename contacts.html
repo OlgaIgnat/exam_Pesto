@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contacts</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">   
+    <link href="https://fonts.googleapis.com/css2?family=Besley:wght@600;700;800;900&display=swap" rel="stylesheet">     
+    <link rel="stylesheet" href="../css/style.css">  
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../modalform/libs/remodal/remodal.css">
+    <link rel="stylesheet" href="../modalform/libs/remodal/remodal-default-theme.css">
+    <link rel="stylesheet" href="../modalform/css/formstyle.css">   
+</head>
+<body>    
+  <section class="header_contacts">
+    <header id="home">      
+      <div class="nav_container">        
+        <div class="header_nav">           
+            <div class="brand_nav"><a href="index.html"><img class="brand-logo-light" src="../img/logo.png" alt="" width="140" height="57"></a></div>                 
+            <div class="navbar fill">                    
+                <ul>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">About</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="menu.html">Menu</a></li>
+                  <li class="rd-nav-item"><a class="rd-nav-link" href="gallery.html">Gallery</a></li>               
+                  <li class="rd-nav-item active"><a class="rd-nav-link" href="contacts.html">Contacts</a></li>
+                </ul>                    
+            </div>            
+            <a class="button_book linkButton" data-remodal-target="firstModal" href="#">book now</a>
+            <div class="remodal" data-remodal-id="firstModal" data-remodal-options="hashTracking: false,closeOnConfirm: false">
+              <button data-remodal-action="close" class="remodal-close"></button>
+              <div class="formArea">               
+              <form id="secondForm" class="form" autocomplete="off">
+              <p class="formTitle">Request a call back and our administrator will contact you</p>
+              <p class="msgs"></p>             
+                  <fieldset class="form-fieldset ui-input __first">
+                    <input name="uname" type="text" id="username" required tabindex="0"minlength="2" pattern="^[a-zA-Z]+$" placeholder="Alex"/>
+                    <label for="username">
+                      <span data-text="Enter your name">Enter your name</span>
+                    </label>
+                  </fieldset>             
+                  <fieldset class="form-fieldset ui-input __second">
+                    <input name="uphone" type="tel" id="phone" tabindex="0" min="6" max="18" required pattern="^[\+\ 0-9]+$" placeholder="+375XXX XXX XXX"/>
+                    <label for="phone">
+                      <span data-text="Enter your phone">Enter your phone</span>
+                    </label>
+                  </fieldset>             
+                  <input name="formInfo" class="formInfo" type="hidden" value=""/>             
+                  <div class="form-footer">
+                    <input type="submit" class="formBtn" value="Back call" />
+                  </div>                 
+              </form>
+              </div>
+            </div>
+
+            <div class="hidden-menu">
+              <input type="checkbox">
+              <span class="line_nav"></span>
+              <span class="line_nav"></span>
+              <span class="line_nav"></span>                
+              <div class="header__toggle-menu" >
+                <div class="nav-toggle fill">
+                    <ul class="nav_menu_toggle">
+                        <li><a href="index.html"> Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li ><a href="gallery.html">Gallery</a></li>
+                        <li class="rd-nav-item active"><a href="contacts.html">Contacts</a></li>                         
+                    </ul>
+                    <a class="button_book toggle linkButton" data-remodal-target="firstModal" href="#">book now</a>
+                </div>
+              </div> 
+            </div>                 
+        </div>
+      </div>     
+    </header>       
+      <div class="container">
+        <h3 > Contacts </h3>
+        <div class="line"></div>
+      </div> 
+  </section>
+    <section class="all_contacts">
+      <div class="container">       
+        <div class="contacts">
+          <div class="contact phone ">
+            <img  src="../img/call.png" alt="phone">
+            <h4><a href="tel:#1-800-123-1234">1-800-123-1234</a></h4>
+            <p>You can call us anytime</p>
+          </div>
+          <div class="contact location">
+            <img src="../img/location.png" alt="location">
+            <h4><a href="#map">51 Francis Street, San Diego, CA 91702 United States</a></h4>        
+          </div>
+          <div class="contact email">
+            <img src="../img/email.png" alt="phone">
+            <h4><a href="mailto:#info@demo.org">info@demo.org</a></h4>
+            <p>Feel free to email us your questions</p>
+          </div>  
+        </div>
+      </div>
+    </section>
+    <iframe  id = "map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3357.2816346373725!2d-117.12151385016516!3d32.70514319486248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d95398c5b04a0b%3A0x6fd2af7593149d6b!2zNTEgUyBGcmFuY2lzIFN0LCBTYW4gRGllZ28sIENBIDkyMTEzLCDQodCo0JA!5e0!3m2!1sru!2sby!4v1631648237039!5m2!1sru!2sby" width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <footer>
+        <div class="footer_up">                   
+              <div class="footer_logo"><a href="index.html"><img class="brand-logo-light" src="../img/logo.png" alt="Logo" width="140" height="57"></a></div>
+              <div class="footer_nav">
+                <ul >
+                  <li class="rd-nav-item "><a class="rd-nav-link" href="index.html">Home</a></li>                     
+                  <li class="rd-nav-item"><a href="about.html">About</a></li> 
+                  <li class="rd-nav-item"><a href="menu.html">Menu</a></li>
+                  <li class="rd-nav-item"><a href="gallery.html">Gallery</a></li>                 
+                  <li class="rd-nav-item active"><a href="contacts.html">Contacts</a></li>                                         
+                </ul>
+              </div>
+              <div class="footer_social">
+                <a href="https://twitter.com"><i class="ico_social ico_tw_black"></i></a>
+                <a href="https://www.facebook.com"><i class="ico_social ico_fb_black"></i></a>
+                <a href="https://help.pinterest.com"><i class="ico_social ico_pint_black"></i></a>
+                <a href="https://www.google.by"><i class="ico_social ico_google_black"></i></a>                  
+              </div>             
+        </div>
+        <div class="up"><a href="#home">&#94</a></div>
+        <div class="footer_down"><p class="rights"><span>©&nbsp; </span> 2021 <a href="#home"> Pesto </a>All Rights Reserved. Privacy Policy</p></div>               
+      </footer>
+      <script src="js/main.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="../modalform/libs/remodal/remodal.min.js"></script>
+      <script src="../modalform/js/form.js"></script>  
+</body>
+</html>
